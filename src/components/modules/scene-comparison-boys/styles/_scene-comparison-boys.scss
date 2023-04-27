@@ -1,0 +1,93 @@
+/*
+* SCSS
+* Name: _scene-welcome.scss
+* Path: src\components\modules\scene-welcome\_scene-welcome.scss
+ */
+@use "sass:math";
+
+@mixin scene-welcome-block-size($ratio: 1) {
+  $width: 350px;
+  $height: 350px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-comparison-boys {
+  position: relative;
+
+  display: inline-block;
+
+  width: 350px;
+  height: 350px;
+
+  overflow: hidden;
+
+  @include scene-welcome-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-welcome-block-size(0.72);
+  }
+
+  // @media (max-width: 768px) {
+  //   @include scene-welcome-block-size(1);
+  // }
+
+  // @media (max-width: 480px) {
+  //   @include scene-welcome-block-size(0.6);
+  // }
+
+  // @media (max-width: 415px) {
+  //   @include scene-welcome-block-size(0.5);
+  // }
+
+  // @media (max-width: 320px) {
+  //   @include scene-welcome-block-size(0.4);
+  // }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__background {
+    background-image: url("../images/scene-comparison-boys-background.svg");
+    background-position: 0 0;
+  }
+
+  &__left-shadow {
+    background-image: url("../images/scene-comparison-left-boys.svg");
+    background-position: 0 100%;
+  }
+
+  &__left-shadows {
+    background-image: url("../images/scene-comparison-left-boys.svg");
+    background-position: 0 50%;
+  }
+
+  &__left-boy {
+    background-image: url("../images/scene-comparison-left-boys.svg");
+    background-position: 0 0%;
+  }
+
+  &__right-shadow {
+    background-image: url("../images/scene-comparison-right-boys.svg");
+    background-position: 0 100%;
+  }
+
+  &__right-boy {
+    background-image: url("../images/scene-comparison-right-boys.svg");
+    background-position: 0 0%;
+  }
+}

@@ -1,0 +1,77 @@
+.btn-secondary {
+  @extend %btn-default;
+
+  z-index: 1;
+
+  padding: 0.9rem 3rem;
+
+  color: $theme-on-accent;
+
+  font-size: 1.2rem;
+  text-transform: none;
+
+  background-image: $theme-secondary-accent;
+  border-radius: 1.5rem;
+
+  &--big {
+    padding: 2.2rem 3.3rem;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    border-radius: 3.2rem;
+  }
+
+  &--shadow {
+    box-shadow: 0 4px 20px rgb(104 130 245 / 70%);
+    transition:
+      box-shadow 0.1s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+
+    content: "";
+  }
+
+  &::before {
+    background-image: $theme-secondary-accent--hover;
+  }
+
+  &::after {
+    background-image: $theme-secondary-accent--active;
+  }
+
+  &:active::after {
+    opacity: 1;
+  }
+
+  &--shadow:active {
+    box-shadow: 0 2px 5px rgb(104 130 245 / 70%);
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}

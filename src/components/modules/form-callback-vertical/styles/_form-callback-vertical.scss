@@ -1,0 +1,102 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+.callback {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+
+  background-color: $theme-background;
+
+  box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+  border-radius: 15px;
+
+  padding: 35px 24px;
+
+  // .callback__form
+
+  &__form {
+    margin-bottom: 20px;
+  }
+
+  // .callbackcallback__fields
+
+  &__fields {
+    margin-bottom: 30px;
+  }
+
+
+  // .callback__field
+
+  &__field,
+  .select {
+    margin-bottom: 20px;
+  }
+
+  &__field:last-child {
+    margin-bottom: 0;
+  }
+
+  // .callback__submit
+
+  &__submit {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  // .callback__agreement
+
+  &__agreement {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: $theme-grey-60;
+
+    &>a {
+      transition: color 0.2s ease;
+      color: $theme-grey-60;
+
+      &:visited {
+        color: $theme-grey-60;
+      }
+
+      // for desktop and Internet Explorer 10+
+      @media (hover: hover) and (pointer: fine),
+      screen and (-ms-high-contrast: active),
+      (-ms-high-contrast: none) {
+        &:hover {
+          color: $theme-secondary;
+        }
+      }
+    }
+  }
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 320px) {
+    padding: 30px 20px;
+
+    box-shadow: 2px 7px 15px rgba(30, 35, 66, 0.15);
+
+    &__form {
+      margin-bottom: 10px;
+    }
+
+    &__fields {
+      margin-bottom: 20px;
+    }
+
+    &__field,
+    .select {
+      margin-bottom: 10px;
+    }
+
+    &__agreement {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+}

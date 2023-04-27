@@ -1,0 +1,28 @@
+<!--
+  * HTML
+  * Name: contacts.html
+  * Path: src\components\sections\contacts\
+-->
+<section class="contacts container" id="id-contacts">
+  <header class="contacts__header">
+    <h2 class="contacts__title title title__h2">
+      Все еще <span>сомневаетесь?</span>
+    </h2>
+    <p class="contacts__subtitle text text--big text--lh-base">
+      Всегда страшно переходить на что-то новое и неизведанное, потому мы предоставляем нашим клиентам возможность попробовать обучаться первую неделю абсолютно бесплатно.
+    </p>
+  </header>
+  <div class="contacts__scene">
+    @@include('../../modules/scene-contacts-first/scene-contacts-first.html', {})
+  </div>
+  <div class="contacts__callbak-wrapper">
+    @@include('../../modules/form-callback-vertical/form-callback-vertical.html', {
+    "parrentClass": "contacts",
+    "id-section": "id-classes",
+    "parameters": {}})
+
+    <div class="contacts__callback-scene">
+      @@include('../../modules/scene-contacts-second/scene-contacts-second.html', {})
+    </div>
+  </div>
+</section>

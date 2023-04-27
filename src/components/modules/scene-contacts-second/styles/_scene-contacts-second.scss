@@ -1,0 +1,62 @@
+/*
+* SCSS
+* Name: _scene-contacts-second.scss
+* Path: src\components\modules\scene-contacts-second\styles\
+ */
+
+@use "sass:math";
+
+@mixin scene-contacts-second-block-size($ratio: 1) {
+  $width: 453px;
+  $height: 547px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+%scene-contacts-second {
+  background-image: url("../images/scene-contacts-second.svg");
+}
+
+.scene-contacts-second {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-contacts-second-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-contacts-second-block-size(0.77);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-contacts-second-block-size(0.77);
+  }
+
+  @media (max-width: 540px) {
+    display: none;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__contacts-0 {
+    @extend %scene-contacts-second;
+    background-position: 0 100%;
+  }
+
+  &__contacts-1 {
+    @extend %scene-contacts-second;
+    background-position: 0 0%;
+  }
+}

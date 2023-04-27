@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="shortcut icon" href="ico/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./styles/styles.min.css" />
+  <link rel="stylesheet" href="./styles/focus-visible.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <h2 class="title title__h2">typography-heading </h2>
+      @@include('../elements/typography-headings/typography-headings.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">typography-text</h2>
+      @@include('../elements/typography-text/typography-text.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">typography-color </h2>
+      @@include('../elements/colors/colors.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">Buttons</h2>
+      @@include('../elements/button/button.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">Buttons-navigation</h2>
+      @@include('../elements/button-navigation/button-navigation.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">form</h2>
+      @@include('../elements/form/form.html')
+
+    </div>
+  </div> <!-- ./container -->
+  <!-- -------------- SCENE -------------- -->
+  <div>
+    <h2 class="title title__h2">scene-header</h2>
+    @@include('../modules/scene-header/scene-header.html')
+  </div>
+  <div class="container">
+    <div>
+      <h2 class="title title__h2">scene-welcome</h2>
+      @@include('../modules/scene-welcome/scene-welcome.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">for-whom</h2>
+      @@include('../modules/scene-for-whom/scene-for-whom-abroad.html')
+      @@include('../modules/scene-for-whom/scene-for-whom-experience.html')
+      @@include('../modules/scene-for-whom/scene-for-whom-family.html')
+      @@include('../modules/scene-for-whom/scene-for-whom-sport.html')
+      @@include('../modules/scene-for-whom/scene-for-whom-traveler.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-offer</h2>
+      @@include('../modules/scene-offer/scene-offer-girl.html')
+      @@include('../modules/scene-offer/scene-offer-boy.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-how-works</h2>
+      @@include('../modules/scene-how-works/scene-how-works-additional-materials.html')
+      @@include('../modules/scene-how-works/scene-how-works-homework.html')
+      @@include('../modules/scene-how-works/scene-how-works-live-lessons.html')
+      @@include('../modules/scene-how-works/scene-how-works-verification-evaluation.html')
+    </div>
+
+
+    <div>
+      <h2 class="title title__h2">scene-loved-for</h2>
+      @@include('../modules/scene-loved-for/scene-loved-for.html')
+    </div>
+    <div>
+      <h2 class="title title__h2">scene-comparison</h2>
+      @@include('../modules/scene-comparison-boys/scene-comparison-boys-left.html')
+      @@include('../modules/scene-comparison-boys/scene-comparison-boys-right.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-advantages</h2>
+      @@include('../modules/scene-advantages/scene-advantages-access.html')
+      @@include('../modules/scene-advantages/scene-advantages-balance.html')
+      @@include('../modules/scene-advantages/scene-advantages-no-stress.html')
+      @@include('../modules/scene-advantages/scene-advantages-professionals.html')
+      @@include('../modules/scene-advantages/scene-advantages-schedule.html')
+      @@include('../modules/scene-advantages/scene-advantages-school-supplies.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-rates</h2>
+      @@include('../modules/scene-rates/scene-rates-little-girl.html')
+      @@include('../modules/scene-rates/scene-rates-average-girl.html')
+      @@include('../modules/scene-rates/scene-rates-big-girl.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-certificate</h2>
+      @@include('../modules/scene-certificate/scene-certificate.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-comment</h2>
+      @@include('../modules/scene-comment/scene-comment.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">scene-contacts</h2>
+      @@include('../modules/scene-contacts-first/scene-contacts-first.html')
+      @@include('../modules/scene-contacts-second/scene-contacts-second.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">Module sign-up-for</h2>
+      <h3 class="title title__h3">sign-up-for.html</h3>
+      @@include('..\modules\sign-up-for\sign-up-for.html')
+    </div>
+
+    <div>
+      <h2 class="title title__h2">Module offer</h2>
+      <h3 class="title title__h3">offer.html</h3>
+      @@include('../modules/offers/offer.html',
+      {
+      "scene": "boy", // boy | girl
+      "action": "big", // big | normal
+      "parentClass": ""
+      }
+      )
+      @@include('../modules/offers/offer.html',
+      {
+      "scene": "girl", // boy | girl
+      "action": "big", // big | normal
+      "parentClass": ""
+      }
+      )
+    </div>
+  </div> <!-- /.container -->
+
+
+  <!-- <script src="./scripts/intersection-observer.min.js"></script> -->
+  <script src="./scripts/focus-visible.min.js"></script>
+  <script src="./scripts/svgxuse.min.js"></script>
+  <script src="./scripts/scripts.min.js"></script>
+</body>
+</html>

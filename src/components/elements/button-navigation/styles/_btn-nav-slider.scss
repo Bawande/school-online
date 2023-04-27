@@ -1,0 +1,81 @@
+.btn-nav-slider {
+  @extend %btn-default;
+
+  position: relative;
+
+  width: 69px;
+  height: 69px;
+
+  background-color: $theme-background;
+
+  border: 1px solid #789cf1;
+  border-radius: 100%;
+
+  box-shadow: 0 0 10px rgba(0 0 0 / 20%);
+
+  transition: box-shadow 0.2s ease-in-out;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 33px;
+    height: 33px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    content: "";
+  }
+
+  &--to-rigth::before {
+    background-image: url("../images/btn-nav-ico-slider.svg");
+    background-position: 92% 0;
+  }
+
+  &--to-left::before {
+    background-image: url("../images/btn-nav-ico-slider.svg");
+    background-position: 5% 0;
+  }
+
+  &.disable {
+    box-shadow: 0 0 2px rgba(0 0 0 / 20%);
+    cursor: not-allowed;
+    filter: grayscale(80%);
+  }
+
+  // for mobile
+  @media (hover: none) {
+    &:active {
+      box-shadow: 0 0 2px rgba(0 0 0 / 20%);
+    }
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &:hover {
+      box-shadow: 0 0 2px rgba(0 0 0 / 20%);
+    }
+  }
+
+  &:active {
+    border-color: $theme-secondary;
+  }
+
+  // @media (max-width: 480px)
+
+  @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+
+    &::before {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

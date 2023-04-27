@@ -1,0 +1,33 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+.header {
+  &>.scene-header {
+    position: absolute;
+  }
+
+  &>.container {
+    position: relative;
+    z-index: 100;
+  }
+
+  height: 770px;
+
+  @media (max-width: 768px) {
+    height: 1122px;
+  }
+
+  @media (max-width: 480px) {
+    height: 850px;
+  }
+
+  @media (max-width: 415px) {
+    height: 820px;
+  }
+
+  @media (max-width: 320px) {
+    height: 742px;
+  }
+}

@@ -1,0 +1,22 @@
+<!--
+  * HTML
+  * Name: comparison.html
+  * Path: src\components\sections\comparison\
+-->
+<section class="comparison" id="id-comparison">
+  <div class="comparison__container container">
+    <h2 class="comparison__title title title__h2">
+      Глянем сравнение:
+    </h2>
+    <div class="comparison__schools-wrap">
+      <div class="comparison__scene comparison__scene-left">
+        @@include('../../modules/scene-comparison-boys/scene-comparison-boys-left.html', {})
+      </div>
+      @@include('./parts/regular-school-list.html', {})
+      @@include('./parts/online-school-list.html', {})
+      <div class="comparison__scene comparison__scene-right">
+        @@include('../../modules/scene-comparison-boys/scene-comparison-boys-right.html', {})
+      </div>
+    </div>
+  </div>
+</section>

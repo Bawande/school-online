@@ -1,0 +1,21 @@
+.btn-nav-footer-menu {
+  @extend %btn-default;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+
+  transition: color 0.2s ease-in-out;
+
+  &:active {
+    color: $theme-secondary;
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &:hover {
+      color: $theme-secondary;
+    }
+  }
+}

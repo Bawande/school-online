@@ -1,0 +1,16 @@
+<!--
+  * HTML
+  * Name:
+  * Path:
+-->
+<header class="header">
+  @@include('../../modules/scene-header/scene-header.html')
+  <div class="container">
+    @@include('../../modules/top-nav/top-nav.html')
+    @@include('../../modules/intro/intro.html', {
+    "title": '@@title-homepage',
+    "text": '@@text-homepage',
+    "tagline": '@@tagline-homepage'
+    })
+  </div>
+</header>

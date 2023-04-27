@@ -1,0 +1,56 @@
+@import "../../../../../node_modules/swiper/swiper";
+
+.swiper {
+
+  @extend .swiper-container;
+
+  // .swiper__wrapper
+
+  &__wrapper {
+    @extend .swiper-wrapper;
+  }
+
+  // .swiper__items
+
+  &__items {
+    @extend .swiper-slide;
+    height: 615px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    &__items {
+      height: 434px;
+    }
+  }
+
+  // @media (max-width: 768px)
+
+  @media (max-width: 768px) {
+    &__items {
+      height: 390px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  // @media (max-width: 480px)
+
+  @media (max-width: 480px) {
+    &__items {
+      height: 292px;
+    }
+  }
+
+  // @media (max-width: 480px)
+
+  @media (max-width: 415px) {
+    &__items {
+      height: 330px;
+    }
+  }
+}

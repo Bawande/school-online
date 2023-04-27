@@ -1,0 +1,17 @@
+.text-block {
+  & p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    & p:not(:last-child) {
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  @media (max-width: 415px) {
+    & p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

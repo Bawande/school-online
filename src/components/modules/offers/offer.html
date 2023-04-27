@@ -1,0 +1,35 @@
+<!--
+  * HTML
+  * Name:
+  * Path:
+-->
+<div class="@@if (parentClass) {@@parentClass__offer} offer">
+  <div class="offer__scene">
+    @@if (scene == 'boy') {@@include('../scene-offer/scene-offer-boy.html')}
+    @@if (scene == 'girl') {@@include('../scene-offer/scene-offer-girl.html')}
+  </div>
+  <div class="offer__content">
+
+    <div class="offer__text-wrap">
+      <div class="offer__title title">Первый месяц обучения от&nbsp;5&nbsp;250&nbsp;руб.</div>
+      <div class="offer__text offer__text--long">
+        Не знаете подойдет ли вашему ребенку обучение онлайн? Попробуйте первый месяц со скидкой 50%!
+      </div>
+      <div class="offer__text offer__text--short">
+        Попробуйте первый месяц со скидкой 50%!
+      </div>
+    </div>
+    @@if (action) {
+    <div class="offer__action">
+      <!-- @@include('@@action', {"parentClass": '@@parentClass'}) -->
+
+      @@if (action == 'big') {
+      @@include('../sign-up-for/sign-up-for-big-btn.html', {"parentClass": '@@parentClass'})
+      }
+      @@if (action == 'normal') {
+      @@include('../sign-up-for/sign-up-for.html', {"parentClass": '@@parentClass'})
+      }
+    </div>
+    }
+  </div>
+</div>

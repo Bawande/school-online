@@ -1,0 +1,176 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+.advantages {
+
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  // .advantages__title
+
+  &__title {
+    margin-bottom: 50px;
+
+    text-align: center;
+  }
+
+  // .advantages__cards-wrap
+
+  &__cards-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 725px;
+
+    cursor: default;
+  }
+
+  // .advantages__card
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+    min-height: 335px;
+
+
+  }
+
+  // .advantages__card-img
+
+  &__card-img {}
+
+  // .advantages__card-title
+
+  &__card-title {
+    width: 90%;
+    margin-bottom: 15px;
+
+    font-size: 2.4rem;
+    text-align: center;
+
+    transition: color 0.3s ease;
+  }
+
+  // .advantages__card-text
+
+  &__card-text {
+    max-width: 315px;
+    overflow: hidden;
+
+    font-size: 1.5rem;
+
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &__card:hover &__card-title {
+      color: $theme-secondary;
+    }
+  }
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    &__cards-wrap {
+      min-height: 670px;
+    }
+
+    &__card-title {
+      max-width: 90%;
+
+      font-size: 2rem;
+    }
+
+    &__card-text {
+      max-width: 80%;
+
+      font-size: 1.4rem;
+    }
+  }
+
+  // @media (max-width: 768px)
+
+  @media (max-width: 768px) {
+    &__cards-wrap {
+      min-height: 970px;
+    }
+
+    &__card {
+      width: 50%;
+    }
+  }
+
+  // @media (max-width: 640px)
+
+  @media (max-width: 640px) {
+    &__cards-wrap {
+      margin-bottom: 50px;
+    }
+  }
+
+  // @media (max-width: 540px)
+
+  @media (max-width: 540px) {
+    padding-bottom: 70px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__cards-wrap {
+      min-height: auto;
+    }
+
+    &__card {
+      width: 100%;
+      min-height: auto;
+    }
+
+    &__card:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    padding-bottom: 50px;
+  }
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 320px) {
+    padding-bottom: 60px;
+
+    padding-top: 10px;
+
+    &__title {
+      margin-bottom: 15px;
+
+      font-size: 2.8rem;
+    }
+
+    &__card:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__card-title {
+      margin-bottom: 8px;
+    }
+
+    &__card-text {
+      max-width: 95%;
+
+      font-size: 1.4rem;
+    }
+  }
+}

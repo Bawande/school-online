@@ -1,0 +1,17 @@
+.classes-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0 6px;
+  max-width: 420px;
+
+  margin-top: 10px;
+  // &__item {}
+
+  @media (max-width: 1000px) {
+    margin-top: 4px;
+  }
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+@import "./accordion";
+
+.faq {
+  padding-top: 56px;
+  padding-bottom: 20px;
+  // .faq__accordion
+
+  &__accordion {}
+
+
+  // @media (max-width: 480px)
+
+  @media (max-width: 480px) {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    padding-top: 30px;
+  }
+}

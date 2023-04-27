@@ -1,0 +1,18 @@
+<!--
+  * HTML
+  * Name: intro.html
+  * Path: src\components\modules\intro\
+-->
+<div class="intro">
+  <div class="intro__scene">
+    @@include('../scene-welcome/scene-welcome.html')
+  </div>
+  <div class="intro__content-wrap">
+    <h1 class="intro__title title title__h1">@@title</h1>
+    <div class="intro__text text text--base text--lh-incompact">
+      <p>@@text</p>
+      <p><strong>@@tagline</strong></p>
+    </div>
+    @@include('../sign-up-for/sign-up-for-big-btn.html', {"parentClass": "intro"})
+  </div>
+</div>

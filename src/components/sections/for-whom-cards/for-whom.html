@@ -1,0 +1,65 @@
+<!--
+  * HTML
+  * Name: for-whom.html
+  * Path: src\components\sections\for-whom-cards\
+-->
+<section class="for-whom container" id="id-for-whom">
+  <h2 class="for-whom__title title title__h2">
+    Кому подходит онлайн образование?
+  </h2>
+  <!--  -->
+  <div class="for-whom__list">
+
+    <div class="for-whom__card">
+      <div class="for-whom__card-icon">
+        @@include('../../modules/scene-for-whom/scene-for-whom-experience.html')
+      </div>
+      <div class="for-whom__card-text">
+        Для тех, кто хочет получать знания
+      </div>
+    </div>
+    <!-- /.for-whom__card -->
+    <div class="for-whom__card">
+      <div class="for-whom__card-icon">
+        @@include('../../modules/scene-for-whom/scene-for-whom-traveler.html')
+      </div>
+      <div class="for-whom__card-text">
+        Для путешественников
+      </div>
+    </div>
+    <!-- /.for-whom__card -->
+    <div class="for-whom__card">
+      <div class="for-whom__card-icon">
+        @@include('../../modules/scene-for-whom/scene-for-whom-family.html')
+      </div>
+      <div class="for-whom__card-text">
+        Для семейного обучения
+      </div>
+    </div>
+    <!-- /.for-whom__card -->
+    <div class="for-whom__card">
+      <div class="for-whom__card-icon">
+        @@include('../../modules/scene-for-whom/scene-for-whom-sport.html')
+      </div>
+      <div class="for-whom__card-text">
+        Для спортсменов
+      </div>
+    </div>
+    <!-- /.for-whom__card -->
+    <div class="for-whom__card">
+      <div class="for-whom__card-icon">
+        @@include('../../modules/scene-for-whom/scene-for-whom-abroad.html')
+      </div>
+      <div class="for-whom__card-text">
+        Для проживающих за рубежом
+      </div>
+    </div>
+    <!-- /.for-whom__card -->
+  </div>
+  <!-- ./ for-whom__list -->
+  @@include('../../modules/offers/offer.html', {
+  "scene": "girl", // boy | girl
+  "action": "big", // big | normal
+  "parentClass": "for-whom"
+  })
+</section>

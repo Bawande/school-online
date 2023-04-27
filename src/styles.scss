@@ -1,0 +1,49 @@
+/*
+* Name: styles.scss
+* Path: src\styles.scss
+ */
+// --- components ---
+@import "./components/common/styles/styles";
+
+// --- elements
+@import "./components/elements/typography-headings/styles/typography-headings";
+@import "./components/elements/typography-text/styles/typography-text";
+@import "./components/elements/colors/styles/colors";
+@import "./components/elements/button/styles/button";
+@import "./components/elements/button-navigation/styles/button-navigation";
+@import "./components/elements/form/styles/form";
+
+// --- modules
+@import "./components/modules/scene-header/styles/scene-header";
+@import "./components/modules/scene-welcome/styles/scene-welcome";
+@import "./components/modules/scene-for-whom/styles/scene-for-whom";
+@import "./components/modules/scene-offer/styles/scene-offer";
+@import "./components/modules/scene-how-works/styles/section-how-works";
+@import "./components/modules/scene-loved-for/styles/scene-loved-for";
+@import "./components/modules/scene-comparison-boys/styles/scene-comparison-boys";
+@import "./components/modules/scene-advantages/styles/scene-advantages";
+@import "./components/modules/scene-rates/styles/section-rates";
+@import "./components/modules/scene-certificate/styles/scene-certificate";
+@import "./components/modules/scene-comment/styles/scene-comment";
+@import "./components/modules/scene-contacts-first/styles/scene-contacts-first";
+@import "./components/modules/scene-contacts-second/styles/scene-contacts-second";
+@import "./components/modules/offers/styles/offer";
+@import "./components/modules/sign-up-for/styles/sign-up-for";
+@import "./components/modules/top-nav/styles/top-nav";
+@import "./components/modules/intro/styles/intro";
+@import "./components/modules/class-nav/styles/class-nav";
+
+// --- section
+@import "./components/sections/header/styles/header";
+@import "./components/sections/for-whom-cards/styles/for-whom";
+@import "./components/sections/how-works/styles/how-works";
+@import "./components/sections/loved-for/styles/loved-for";
+@import "./components/sections/comparison/styles/comparison";
+@import "./components/sections/advantages/styles/advantages";
+@import "./components/sections/rates/styles/rates";
+@import "./components/sections/certificate/styles/certificate";
+@import "./components/sections/comment/styles/comment";
+@import "./components/sections/faq/styles/faq";
+@import "./components/sections/contacts/styles/contacts";
+@import "./components/sections/footer/styles/footer";
+@import "./components/sections/modal-callback/styles/modal-callback";

@@ -1,0 +1,260 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+.offer {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 240px;
+
+  overflow: hidden;
+
+  &__scene {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 22px;
+    padding-right: 48px;
+    padding-bottom: 22px;
+    padding-left: 200px;
+
+    background-color: $theme-surface;
+    border-radius: 25px;
+  }
+
+  &__text-wrap {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+
+    font-size: 32px;
+    line-height: 1.05;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__text--short {
+    display: none;
+  }
+
+  &__action {
+    width: 275px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 1000px) {
+    height: 215px;
+
+    &__scene {
+      bottom: 5px;
+      left: 15px;
+    }
+
+    &__content {
+      padding-top: 18px;
+      padding-right: 20px;
+      padding-bottom: 18px;
+      padding-left: 200px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__action {
+      width: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 275px;
+
+    &__scene {
+      bottom: 0;
+      left: 10px;
+    }
+
+    &__content {
+      display: block;
+      padding-top: 25px;
+      padding-right: 18px;
+      padding-bottom: 18px;
+      padding-left: 224px;
+    }
+
+    &__text-wrap {
+      margin-right: 0;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+
+    &__action {
+      margin-left: 0;
+      max-width: 260px;
+    }
+  }
+
+  //   @media (max-width: 640px)
+
+  @media (max-width: 660px) {
+    &__content {
+      padding-left: 190px;
+    }
+
+    &__title {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    &__scene {
+      left: 5px;
+    }
+  }
+
+  // @media (max-width: 540px)
+
+  @media (max-width: 540px) {
+    height: auto;
+
+    &__scene {
+      top: 35px;
+      bottom: auto;
+      left: 10px;
+    }
+
+    &__content {
+      padding-top: 50px;
+      padding-right: 33px;
+      padding-bottom: 30px;
+      padding-left: 33px;
+    }
+
+    &__text-wrap {
+      margin-bottom: 30px;
+      margin-left: 115px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__action {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 415px) {
+    &__scene {
+      top: 30px;
+      left: 30px;
+    }
+
+    &__content {
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    &__text-wrap {
+      margin-bottom: 40px;
+      margin-left: 120px;
+    }
+
+    &__text--long {
+      display: none;
+    }
+
+    &__text--short {
+      display: block;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+
+      font-size: 21px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    &__scene {
+      top: auto;
+      bottom: 130px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+
+    &__content {
+      padding: 30px 20px 17px;
+    }
+
+    &__text-wrap {
+      margin-right: auto;
+      margin-bottom: 155px;
+      margin-left: auto;
+
+      text-align: center;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__text--long {
+      display: block;
+    }
+
+    &__text--short {
+      display: none;
+    }
+  }
+
+  // for Internet Explorer 10+
+  @media screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    @media (max-width: 1024px) {
+      &__text-wrap {
+        max-width: 400px;
+      }
+
+      &__action {
+        width: auto;
+      }
+    }
+  }
+}

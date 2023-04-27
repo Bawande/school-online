@@ -1,0 +1,102 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+@import "./card";
+@import "./card-media";
+
+.rates {
+  background-color: $theme-surface;
+  overflow: hidden;
+
+  // .rates__container
+
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    overflow: visible;
+  }
+
+  // .rates__title
+
+  &__title {
+    margin-bottom: 55px;
+    text-align: center;
+  }
+
+  // .rates__cards-wrap
+
+  &__cards-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .rates__card
+
+  &__card {}
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    &__container {
+      padding-top: 35px;
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 44px;
+    }
+  }
+
+  // @media (max-width: 940px)
+
+  @media (max-width: 940px) {
+    &__cards-wrap {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__card:last-child {
+      margin-top: 30px;
+    }
+  }
+
+  // @media (max-width: 688px)
+
+  @media (max-width: 688px) {
+    &__cards-wrap {
+      justify-content: center;
+    }
+
+    &__card {
+      margin-top: 40px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // @media (max-width: 480px)
+
+  @media (max-width: 480px) {
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    &__title {
+      margin-bottom: 28px;
+    }
+  }
+
+  // @media (max-width: 360px)
+
+  @media (max-width: 360px) {
+    &__container {
+      padding-top: 30px;
+
+    }
+  }
+}

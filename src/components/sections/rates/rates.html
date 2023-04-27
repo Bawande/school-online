@@ -1,0 +1,57 @@
+<!--
+  * HTML
+  * Name: rates.html
+  * Path: src\components\sections\rates\
+-->
+<section class="rates" id="id-rates">
+  <div class="rates__container container">
+    <h2 class="rates__title title title__h2">
+      Сколько стоит обучение в онлайн школе?
+    </h2>
+    <div class="rates__cards-wrap">
+
+      @@include('./parts/card.html', {
+      "title": "1-4 класс",
+      "subtitle": "Веселые и увлекательные уроки",
+      "price": "10 500",
+      "sceneName": "scene-rates-little-girl", // scene-rates-little-girl, scene-rates-average-girl, scene-rates-big-girl
+      "list":[
+      '2-3 урока в день пн-чт',
+      '10-12 учеников в классе',
+      'внимание к каждому ребенку',
+      'интерактивные тренажеры',
+      'игровая форма обучения',
+      'зачисление в школу партнер 12 000/год']
+      })
+
+      @@include('./parts/card.html', {
+      "title": "5-8 класс",
+      "subtitle": "Помогаем не потерять интерес",
+      "price": "12 500",
+      "sceneName": "scene-rates-average-girl", // scene-rates-little-girl, scene-rates-average-girl, scene-rates-big-girl
+      "list":[
+      '3-5 уроков в день пн-пт',
+      '12-15 учеников в классе',
+      'внимание к каждому ребенку',
+      'интерактивные тренажеры',
+      'усиленная подготовка к ОГЭ',
+      'зачисление в школу партнер 12 000/год']
+      })
+
+      @@include('./parts/card.html', {
+      "title": "9-11 класс",
+      "subtitle": "Самый важный этап в жизни",
+      "price": "16 500",
+      "sceneName": "scene-rates-big-girl", // scene-rates-little-girl, scene-rates-average-girl, scene-rates-big-girl
+      "list":[
+      '4-5 уроков в день пн-пт',
+      '12-15 учеников в классе',
+      'внимание к каждому ребенку',
+      'интерактивные тренажеры',
+      'усиленная подготовка к ОГЭ и ЕГЭ',
+      'зачисление в школу партнер 12 000/год']
+      })
+
+    </div> <!-- rates__cards-wrap -->
+  </div>
+</section>

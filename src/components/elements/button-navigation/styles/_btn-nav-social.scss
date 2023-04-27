@@ -1,0 +1,57 @@
+.btn-nav-social {
+  @extend %btn-default;
+
+  position: relative;
+
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  font-size: 0;
+  text-indent: -9999px;
+
+  border-radius: 100%;
+
+  transition: transform 0.2s ease-in-out;
+
+  &__telegramm {
+    @extend %icon-social-telegramm;
+  }
+
+  &__watsapp {
+    @extend %icon-social-watsapp;
+  }
+
+  &__youtube {
+    @extend %icon-social-youtube;
+  }
+
+  &__vkontakte {
+    @extend %icon-social-vkontakte;
+  }
+
+  // for mobile
+  @media (hover: none) {
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

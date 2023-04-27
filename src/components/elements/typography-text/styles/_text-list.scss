@@ -1,0 +1,41 @@
+.text-list {
+  margin: 0;
+  padding: 0;
+
+  & li {
+    position: relative;
+
+    padding-left: 2.4rem;
+  }
+
+  & li::before {
+    position: absolute;
+    top: 0.6em;
+    left: 1rem;
+
+    display: block;
+    width: 4px;
+    height: 4px;
+
+    background-color: black;
+    border-radius: 50%;
+
+    content: "";
+  }
+
+  & ul:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    & ul:not(:last-child) {
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  @media (max-width: 415px) {
+    & ul:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

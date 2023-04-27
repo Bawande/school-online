@@ -1,0 +1,146 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+@import "./comment-slider";
+@import "./comment-card";
+
+.comment {
+  position: relative;
+
+  padding-top: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  // .comment__title
+
+  &__title {
+    position: relative;
+    z-index: 20;
+
+    max-width: 90%;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  // .comment__swiper
+
+  // &__swiper {}
+
+  // .comment__button-wrapper
+
+  &__button-wrapper {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    max-width: 170px;
+    margin: 0 auto;
+  }
+
+  // .comment__scene
+
+  &__scene {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    z-index: -1;
+
+    transform: translate(-50%, -50%);
+  }
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    &__swiper {
+      margin-bottom: 40px;
+    }
+
+    &__scene {
+      left: 67%;
+    }
+  }
+
+  // @media (max-width: 768px)
+
+  @media (max-width: 768px) {
+    &__title {
+      max-width: 70%;
+    }
+
+    &__swiper {
+      margin-bottom: 60px;
+    }
+
+    &__scene {
+      left: 60%;
+    }
+  }
+
+  // @media (max-width: 480px)
+
+  @media (max-width: 480px) {
+    padding-top: 34px;
+
+    &__title {
+      margin-bottom: 18px;
+    }
+
+    &__swiper {
+      margin-bottom: 18px;
+    }
+
+    &__button-wrapper {
+      max-width: 130px;
+    }
+
+    &__scene {
+      top: 57%;
+      left: 50%;
+    }
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    padding-top: 18px;
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__swiper {
+      margin-bottom: 18px;
+    }
+
+    &__button-wrapper {
+      max-width: 130px;
+    }
+
+    &__scene {
+      top: 57%;
+      left: 50%;
+    }
+  }
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 320px) {
+    &__title {
+      max-width: 90%;
+
+      font-size: 2.8rem;
+    }
+
+    &__swiper {
+      margin-bottom: 0;
+    }
+
+    &__scene {
+      display: none;
+    }
+  }
+}

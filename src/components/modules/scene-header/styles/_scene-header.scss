@@ -1,0 +1,136 @@
+/*
+* SCSS
+* Name: _scene-header.scss
+* Path: src\components\modules\scene-header\styles\
+ */
+@use "sass:math";
+
+@mixin scene-header-block-size($ratio: 1) {
+  $width: 320px;
+  $height: 770px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-header {
+  position: relative;
+
+  display: inline-block;
+
+  width: 100%;
+  height: 770px;
+
+  overflow: hidden;
+
+  background: #c2c2c2;
+  background: linear-gradient(0deg, #eef1fd 0%, #fff 100%);
+
+  @media (max-width: 768px) {
+    height: 1122px;
+  }
+
+  @media (max-width: 480px) {
+    height: 850px;
+  }
+
+  @media (max-width: 415px) {
+    height: 820px;
+  }
+
+  @media (max-width: 320px) {
+    height: 742px;
+  }
+
+  &__left {
+    // position: absolute;
+
+    bottom: 0;
+    left: 20px;
+
+    // display: inline-block;
+
+    @media (max-width: 1000px) {
+      left: 0;
+    }
+  }
+
+  &__right {
+    // position: absolute;
+
+    top: 0;
+    right: 0;
+
+    // display: inline-block;
+  }
+
+  &__item {
+    position: absolute;
+
+    display: block;
+
+    @include scene-header-block-size(1);
+
+    @media (max-width: 1000px) {
+      @include scene-header-block-size(0.8);
+    }
+
+    @media (max-width: 768px) {
+      @include scene-header-block-size(0.9);
+    }
+
+    @media (max-width: 480px) {
+      @include scene-header-block-size(0.7);
+    }
+
+    @media (max-width: 415px) {
+      @include scene-header-block-size(0.6);
+    }
+
+    @media (max-width: 320px) {
+      @include scene-header-block-size(0.6);
+    }
+  }
+
+  &__left-item,
+  &__right-item {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__left-item {
+    background-image: url("../images/scene-header-left.svg");
+  }
+
+  &__left-0 {
+    background-position: 0 0;
+  }
+
+  &__left-1 {
+    background-position: 0 50%;
+  }
+
+  &__left-2 {
+    background-position: 0 100%;
+  }
+
+  &__right-item {
+    background-image: url("../images/scene-header-right.svg");
+  }
+
+  &__right-0 {
+    background-position: 0 0;
+  }
+
+  &__right-1 {
+    background-position: 0 50%;
+  }
+
+  &__right-2 {
+    background-position: 0 100%;
+  }
+}

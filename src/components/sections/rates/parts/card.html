@@ -1,0 +1,26 @@
+<div class="rates__card rates-card">
+  <div class="rates-card__price">
+    @@price <span>₽</span>
+  </div>
+
+  <article class="rates-card__inside">
+    <h3 class="rates-card__title">
+      @@title
+    </h3>
+    <div class="rates-card__subtitle">
+      @@subtitle
+    </div>
+    <ul class="rates-card__list">
+      @@for (var i = 0; i < list.length; i++) { <li class="rates-card__list-item">
+        <span>`+list[i]+`</span>
+        </li>
+        }
+    </ul> <!-- /.rates-card__list -->
+    <button class="rates-card__btn btn-secondary btn-secondary--shadow">Подробнее</button>
+  </article> <!-- / .rates-card__inside -->
+
+  <div class="rates-card__scene">
+    @@include('../../../modules/scene-rates/@@sceneName.html', {})
+  </div>
+
+</div> <!-- rates-card -->

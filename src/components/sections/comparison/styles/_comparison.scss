@@ -1,0 +1,119 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+@import "./school-list";
+
+.comparison {
+  overflow: hidden;
+
+  // .comparison__container
+
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    overflow: visible;
+  }
+
+  // .comparison__scene
+
+  &__scene {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    transform: translate(-50%, -50%);
+  }
+
+  // .comparison__scene-left
+
+  &__scene-left {
+    left: 5%;
+  }
+
+  // .comparison__scene-right
+
+  &__scene-right {
+    left: 95%;
+  }
+
+  // .comparison__title
+
+  &__title {
+    margin-bottom: 60px;
+
+    text-align: center;
+  }
+
+  // .comparison__schools-wrap
+
+  &__schools-wrap {
+    position: relative;
+
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    &__title {
+      margin-bottom: 35px;
+    }
+
+    &__scene {
+      top: auto;
+
+      transform: translateX(-50%) translateY(0);
+    }
+
+    &__scene-left {
+      top: 5%;
+      left: 8%;
+    }
+
+    &__scene-right {
+      bottom: 3%;
+      left: 93%;
+    }
+  }
+
+  // @media (max-width: 768px)
+
+  @media (max-width: 768px) {
+    &__scene {
+      display: none;
+    }
+  }
+
+  // @media (max-width: 640px)
+
+  @media (max-width: 640px) {
+    &__container {
+      padding-top: 70px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__schools-wrap {
+      flex-direction: column;
+    }
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    &__container {
+      padding-top: 48px;
+      padding-bottom: 5px;
+
+    }
+  }
+}

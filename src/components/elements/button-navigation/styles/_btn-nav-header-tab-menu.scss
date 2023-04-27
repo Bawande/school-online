@@ -1,0 +1,94 @@
+.btn-nav-header-tab-menu {
+  @extend %btn-default;
+  z-index: 1;
+
+  margin: 0.4rem 0.1rem;
+
+  padding: 0.9rem 3rem;
+
+  color: $theme-on-accent;
+  font-weight: 700;
+
+  font-size: 1.2rem;
+  text-transform: none;
+
+  background-image: $theme-secondary-accent;
+  border-radius: 1.5rem;
+
+  transition:
+    margin 0.3s ease-in-out,
+    padding 0.3s ease-in-out,
+    border-radius 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+
+  &.active {
+    cursor: default;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+
+    content: "";
+  }
+
+  &::before {
+    background-image: $theme-primary-accent;
+  }
+
+  &::after {
+    background-image: $theme-primary-accent--active;
+  }
+
+  &:active::after {
+    opacity: 1;
+  }
+
+  &.active::before {
+    opacity: 1;
+  }
+
+  // for mobile
+  @media (hover: none) {
+
+    &:active,
+    &.active {
+      margin: 0;
+      padding: 1.3rem 3.1rem;
+
+      border-radius: 2.5rem;
+      box-shadow: 0 4px 20px rgb(104 130 245 / 70%);
+    }
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+
+    &:hover,
+    &.active {
+      margin: 0;
+      padding: 1.3rem 3.1rem;
+
+      border-radius: 2.5rem;
+      box-shadow: 0 4px 20px rgb(104 130 245 / 70%);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<!--
+  * HTML
+  * Name: comment.html
+  * Path: src\components\sections\comment\
+-->
+
+<section class="comment">
+  <h2 class="comment__title title title__h2">
+    Отзывы родителей о "Школе Будущего Online"
+  </h2>
+
+  <div id="#id-swiper" class="comment__swiper swiper swiper-container">
+    <div class="swiper__wrapper">
+      @@loop("./parts/comment-card.html", "..\sections\comment\data\data-comment.json")
+    </div> <!-- / .swiper-wrapper -->
+  </div> <!-- / .comment__swiper -->
+
+  <div class="comment__button-wrapper">
+    <div class="btn-nav-slider btn-nav-slider--to-left"></div>
+    <div class="btn-nav-slider btn-nav-slider--to-rigth"></div>
+  </div>
+
+  <div class="comment__scene">
+    @@include('../../modules/scene-comment/scene-comment.html', {})
+  </div>
+
+</section>

@@ -1,0 +1,88 @@
+<!--
+  * HTML
+  * Name:
+  * Path:
+-->
+<div>
+  <h3 class="title title__h3">.form</h3>
+  <form class="form">
+
+    <fieldset class="form__fields">
+      <legend class="form__legend ">Контакты</legend>
+      <label>E-mail</label>
+      <div class="form__field">
+        <input type="email" placeholder="name@mail.ru" aria-label="укажите адрес электронной почты">
+      </div> <!-- ./field -->
+      <label>Класс</label>
+      <div class="form__field">
+        <input type="number" placeholder="Класс" aria-label="введите желаемый класс">
+      </div> <!-- ./field -->
+      <label>Телефон родителя</label>
+      <div class="form__field">
+        <input type="tel" placeholder="Телефон родителя" aria-label="введите телефон родителя">
+      </div> <!-- ./field -->
+      <label>Имя родителя</label>
+      <div class="form__field">
+        <input type="text" placeholder="Имя родителя" aria-label="укажите инициалы родителя">
+      </div> <!-- ./field -->
+    </fieldset> <!-- ./fields -->
+  </form> <!-- ./form -->
+</div>
+
+<div>
+  <h3 class="title title__h3">.form-callback</h3>
+  <form class="form-callback">
+
+    <fieldset class="form-callback__fields">
+
+      <select id="id-select-classes">
+        <optgroup id="" label="Младшая школа:">
+          <option value="1 Класс">1 Класс</option>
+          <option value="2 Класс">2 Класс</option>
+          <option value="3 Класс">3 Класс</option>
+          <option value="4 Класс">4 Класс</option>
+        </optgroup>
+        <optgroup id="" label="Средняя школа:">
+          <option value="5 Класс">5 Класс</option>
+          <option value="6 Класс">6 Класс</option>
+          <option value="7 Класс">7 Класс</option>
+          <option value="8 Класс">8 Класс</option>
+        </optgroup>
+        <optgroup id="" label="Старшая школа:">
+          <option value="9 Класс">9 Класс</option>
+          <option value="10 Класс">10 Класс</option>
+          <option value="11 Класс">11 Класс</option>
+        </optgroup>
+
+      </select>
+
+      <legend class="form-callback__legend ">Контакты</legend>
+      <label>E-mail</label>
+      <div class="form-callback__field">
+        <input class="form-callback__input" type="email" placeholder="name@mail.ru" aria-label="укажите адрес электронной почты">
+      </div> <!-- ./field -->
+      <label>Класс</label>
+      <div class="form-callback__field">
+        <input class="form-callback__input" type="number" name="class" placeholder="Класс" aria-label="введите желаемый класс">
+        <i class="form-callback__ico form-callback__ico--class"></i>
+      </div> <!-- ./field -->
+      <label>Телефон родителя</label>
+      <div class="form-callback__field">
+        <input class="form-callback__input" type="tel" name="telephone" placeholder="Телефон родителя" aria-label="введите телефон родителя">
+        <i class="form-callback__ico form-callback__ico--name"></i>
+      </div> <!-- ./field -->
+      <label>Имя родителя</label>
+      <div class="form-callback__field">
+        <input class="form-callback__input" type="text" name="name" placeholder="Имя родителя" aria-label="укажите инициалы родителя">
+        <i class="form-callback__ico form-callback__ico--phone"></i>
+      </div> <!-- ./field -->
+      <label>.error</label>
+      <div class="form-callback__field error">
+        <input class="form-callback__input" type="text" placeholder="Имя" aria-label="поле с ошибкой" value="не корректный текст">
+        <i class="form-callback__ico form-callback__ico--phone"></i>
+
+      </div> <!-- ./field -->
+    </fieldset> <!-- ./fields -->
+
+  </form> <!-- ./form -->
+</div>

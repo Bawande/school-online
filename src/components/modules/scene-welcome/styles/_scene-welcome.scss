@@ -1,0 +1,65 @@
+/*
+* SCSS
+* Name: _scene-welcome.scss
+* Path: src\components\modules\scene-welcome\_scene-welcome.scss
+ */
+@use "sass:math";
+
+@mixin scene-welcome-block-size($ratio: 1) {
+  $width: 710px;
+  $height: 435px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-welcome {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-welcome-block-size(1);
+
+  @media (max-width: 1100px) {
+    @include scene-welcome-block-size(0.9);
+  }
+
+  @media (max-width: 1000px) {
+    @include scene-welcome-block-size(0.72);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-welcome-block-size(0.95);
+  }
+
+  @media (max-width: 540px) {
+    @include scene-welcome-block-size(0.7);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-welcome-block-size(0.6);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-welcome-block-size(0.5);
+  }
+
+  @media (max-width: 360px) {
+    @include scene-welcome-block-size(0.4);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+}

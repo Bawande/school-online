@@ -1,0 +1,267 @@
+// common styles
+
+%common-shool {
+  position: relative;
+  z-index: 20;
+
+  display: inline-block;
+
+  border-radius: 15px;
+  box-shadow: 4px 12px 20px rgb(30 35 66 / 15%);
+}
+
+// %common-title
+
+%common-title {
+  width: 100%;
+  margin-bottom: 30px;
+
+  font-size: 3.4rem;
+
+  text-align: center;
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    font-size: 2.8rem;
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    font-size: 3.2rem;
+  }
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 360px) {
+    margin-bottom: 22px;
+
+    font-size: 2.4rem;
+  }
+}
+
+// %common-list
+
+%common-list {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.5rem;
+}
+
+// %common-item
+
+%common-item {
+  position: relative;
+
+  padding-left: 40px;
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    padding-left: 30px;
+  }
+}
+
+%common-item::before {
+
+  position: absolute;
+  top: 50%;
+  left: 3px;
+
+  display: block;
+  width: 9px;
+  height: 9px;
+
+  background-color: $theme-primary;
+
+  border-radius: 100%;
+
+  transform: translateX(-50%);
+
+  content: "";
+}
+
+// individual styles
+
+// .regular-school
+
+.regular-school {
+  @extend %common-shool;
+
+  padding: 42px 40px;
+  min-width: 360px;
+  min-height: 470px;
+
+  right: -20px;
+
+  background-color: $theme-surface;
+
+  // .regular-school__title
+
+  &__title {
+    @extend %common-title;
+  }
+
+  // .regular-school__list
+
+  &__list {
+    @extend %common-list;
+    font-size: 1.5rem;
+  }
+
+  // .regular-school__item
+
+  &__item {
+    @extend %common-item;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    padding-top: 28px;
+
+    min-width: 312px;
+    min-height: 450px;
+
+    right: -5px;
+
+    &__list {
+      font-size: 1.4rem;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  // @media (max-width: 640px)
+
+  @media (max-width: 640px) {
+    right: auto;
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    padding-top: 18px;
+  }
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 360px) {
+    min-width: 260px;
+    min-height: 410px;
+
+    padding: 18px 22px;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+// .online-school
+
+.online-school {
+  @extend %common-shool;
+  left: -20px;
+
+  padding: 38px 40px;
+  min-width: 376px;
+  min-height: 490px;
+
+  color: $theme-on-accent;
+
+  background-image: $theme-secondary-accent;
+
+  // .online-school__title
+
+  &__title {
+    @extend %common-title;
+  }
+
+  // .online-school__list
+
+  &__list {
+    @extend %common-list;
+    font-size: 1.8rem;
+  }
+
+  // .online-school__item
+
+  &__item {
+    @extend %common-item;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &::before {
+      background-color: $theme-on-accent;
+    }
+  }
+
+  // @media (max-width: 1000px)
+
+  @media (max-width: 1000px) {
+    min-width: 334px;
+    min-height: 470px;
+    left: -5px;
+
+    padding-top: 28px;
+
+    &__list {
+      font-size: 1.6rem;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  // @media (max-width: 640px)
+
+  @media (max-width: 640px) {
+    left: auto;
+    top: -20px;
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    top: -38px;
+  }
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 360px) {
+    min-width: 280px;
+    min-height: 440px;
+
+    padding: 30px 22px 30px 18px;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__title {
+      font-size: 2.6rem;
+    }
+  }
+}

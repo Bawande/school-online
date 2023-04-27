@@ -1,0 +1,102 @@
+.btn-nav-tab-inside {
+  @extend %btn-default;
+  z-index: 1;
+
+  padding: 2.2rem 3.5rem;
+
+  min-width: 20rem;
+
+  color: $theme-primary;
+  font-weight: 500;
+  font-size: 2rem;
+
+  font-family: Gotham, sans-serif;
+
+  background-color: $theme-background;
+  border-radius: 2.5rem;
+  box-shadow: 14px 22px 40px rgb(30 35 66 / 25%);
+
+
+  transition:
+    color 0.1s ease-in-out,
+    box-shadow 0.5s ease-in-out;
+
+  &.active {
+    cursor: default;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+
+    content: "";
+  }
+
+  &::before {
+    background-image: $theme-secondary-accent;
+  }
+
+  &::after {
+    background-image: $theme-secondary-accent--active;
+  }
+
+  &:active::after {
+    opacity: 1;
+  }
+
+  &.active::before {
+    opacity: 1;
+  }
+
+  // for mobile
+  @media (hover: none) {
+
+    &.active,
+    &:active {
+
+      color: $theme-on-accent;
+
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    &:active::before {
+      opacity: 1;
+    }
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+
+    &:hover,
+    &.active {
+
+      background-color: transparent;
+
+      color: $theme-on-accent;
+
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    &:active {
+      box-shadow: 0px 2px 2px rgb(0 0 0 / 40%);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}

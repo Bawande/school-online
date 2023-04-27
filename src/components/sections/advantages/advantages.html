@@ -1,0 +1,54 @@
+<!--
+  * HTML
+  * Name: advantages.html
+  * Path: src\components\sections\advantages\
+-->
+<section class="advantages container">
+  <h2 class="advantages__title title title__h2">
+    Онлайн школа<br>среднего образования это -
+  </h2>
+  <div class="advantages__cards-wrap">
+    @@include('./parts/advantages-card.html', {
+    "sceneName": "scene-advantages-schedule",
+    "title": "Удобный график занятий",
+    "text": "Вы можете выбрать удобное время начала занятий (9:00, 11:00 или 13:00)"
+    })
+
+    @@include('./parts/advantages-card.html', {
+    "sceneName": "scene-advantages-access",
+    "title": "Записи уроков доступны всегда",
+    "text": "Пропустил урок - не страшно! Записи уроков можно посмотреть в любое время"
+    })
+
+    @@include('./parts/advantages-card.html', {
+    "sceneName": "scene-advantages-balance",
+    "title": "Сбалансированная нагрузка",
+    "text": "Никаких лишних и не нужных занятий. Только важное и необходимое"
+    })
+
+    @@include('./parts/advantages-card.html', {
+    "sceneName": "scene-advantages-school-supplies",
+    "title": "Не нужно покупать школьную форму и канцелярию",
+    "text": "Тетрадка, ручка, линейка и карандаш - это все, что нужно для учебы в онлайн школе!"
+    })
+
+    @@include('./parts/advantages-card.html', {
+    "sceneName": "scene-advantages-professionals",
+    "title": "Высококлассные педагоги",
+    "text": "Опытные учителя прошедшие строгий отбор и использующие современные методы обучения"
+    })
+
+    @@include('./parts/advantages-card.html', {
+    "sceneName": "scene-advantages-no-stress",
+    "title": "Никакого стресса",
+    "text": "В учебных классах поддерживается атмосфера дружбы и уважения. Никакого давления. Дети чувствуют себя комфортно"
+    })
+  </div> <!-- / .advantages__cards-wrap -->
+
+  @@include('../../modules/offers/offer.html', {
+  "scene": "boy", // boy | girl
+  "action": "big", // big | normal
+  "parentClass": "for-whom"
+  })
+
+</section>

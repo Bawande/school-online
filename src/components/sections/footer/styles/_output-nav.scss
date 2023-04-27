@@ -1,0 +1,28 @@
+.output-nav {
+  // .output-nav__logo
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // .output-nav__text
+
+  &__text {
+    font-size: 1rem;
+    color: $foorer-secondary;
+
+    &>a {
+      display: block;
+
+      color: inherit;
+      text-decoration: none;
+
+      &:visited {
+        color: inherit;
+      }
+    }
+
+    &>* {
+      margin-bottom: 5px;
+    }
+  }
+}

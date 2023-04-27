@@ -1,0 +1,54 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+@use "sass:math";
+
+@mixin scene-comment-block-size($ratio: 1) {
+  $width: 730px;
+  $height: 614px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+#id-scene-comment-wrap {
+  display: inline-block;
+}
+
+.scene-comment {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-comment-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-comment-block-size(0.89);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-comment-block-size(0.82);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-comment-block-size(0.53);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-comment-block-size(0.47);
+  }
+
+  @media (max-width: 320px) {
+    display: none;
+    @include scene-comment-block-size(1);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+
+}

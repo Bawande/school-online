@@ -1,0 +1,55 @@
+<!--
+  * HTML
+  * Name: form-callback-vertical.html
+  * Path: src\components\modules\form-callback-vertical\
+-->
+<div class="@@parrentClass__callback callback">
+  <form class="callback__form form-callback">
+    <fieldset class="callback__fields form-callback__fields">
+      <!-- <div class="callback__field form-callback__field">
+        <input class="form-callback__input" type="number" name="class" placeholder="Класс" aria-label="введите желаемый класс">
+        <i class="form-callback__ico form-callback__ico--class"></i>
+      </div>  -->
+
+      <select id="@@id-section">
+        <optgroup label="Младшая школа:">
+          <option value="1 Класс">1 Класс</option>
+          <option value="2 Класс">2 Класс</option>
+          <option value="3 Класс">3 Класс</option>
+          <option value="4 Класс">4 Класс</option>
+        </optgroup>
+        <optgroup label="Средняя школа:">
+          <option value="5 Класс">5 Класс</option>
+          <option value="6 Класс">6 Класс</option>
+          <option value="7 Класс">7 Класс</option>
+          <option value="8 Класс">8 Класс</option>
+        </optgroup>
+        <optgroup label="Старшая школа:">
+          <option value="9 Класс">9 Класс</option>
+          <option value="10 Класс">10 Класс</option>
+          <option value="11 Класс">11 Класс</option>
+        </optgroup>
+
+      </select>
+
+      <div class="callback__field form-callback__field">
+        <input class="form-callback__input" type="text" name="name" placeholder="Имя родителя" aria-label="укажите инициалы родителя">
+        <i class="form-callback__ico form-callback__ico--phone"></i>
+      </div> <!-- ./field -->
+
+      <div class="callback__field form-callback__field">
+        <input class="form-callback__input" type="tel" name="telephone" placeholder="Телефон родителя" aria-label="введите телефон родителя">
+        <i class="form-callback__ico form-callback__ico--name"></i>
+      </div> <!-- ./field -->
+
+    </fieldset> <!-- ./fields -->
+
+    <button class="callback__submit btn-secondary btn-secondary--big">
+      Оставить заявку
+    </button>
+  </form>
+
+  <p class="callback__agreement">
+    <a href="#"> Нажимая кнопку, вы даете согласие на обработку своих персональных данных</a>
+  </p>
+</div>

@@ -1,0 +1,70 @@
+/*
+* SCSS
+* Name: _section-rates.scss
+* Path: src\components\modules\scene-rates\styles\
+ */
+@use "sass:math";
+
+@mixin scene-rates-block-size($ratio: 1) {
+  $width: 145px;
+  $height: 370px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-rates {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-rates-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-rates-block-size(0.95);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-rates-block-size(0.95);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-rates-block-size(0.95);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-rates-block-size(0.85);
+  }
+
+  @media (max-width: 360px) {
+    @include scene-rates-block-size(0.65);
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__little-girl {
+    background-image: url("../images/scene-rates-little-girl.svg");
+    background-position: 0 0;
+  }
+
+  &__average-girl {
+    background-image: url("../images/scene-rates-average-girl.svg");
+    background-position: 0 0;
+  }
+
+  &__big-girl {
+    background-image: url("../images/scene-rates-big-girl.svg");
+    background-position: 0 0;
+  }
+}

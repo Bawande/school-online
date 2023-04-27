@@ -1,0 +1,221 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+
+.how-works {
+  padding-top: 75px;
+  padding-bottom: 66px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__card-wrap {
+    background-image: url('../images/how-are-they-line.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+
+    cursor: default;
+  }
+
+  &__card:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+
+  &__card-img {}
+
+  &__card-description {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+  }
+
+  &__card-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+
+    transition: color 0.5s ease;
+  }
+
+  &__card-text {
+    text-align: center;
+  }
+
+  // for desktop and Internet Explorer 10+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &__card:hover &__card-title {
+      color: $theme-secondary;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__title {
+      margin-bottom: 70px;
+    }
+
+    &__card-description {
+      height: 190px;
+    }
+
+    &__card-title {
+      font-size: 1.8rem;
+    }
+
+    &__card-text {
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &__title {
+      margin-bottom: 35px;
+    }
+
+    &__card-wrap {
+      background-image: none;
+    }
+
+    &__card {
+      width: 50%;
+      margin-bottom: 35px;
+    }
+
+    &__card:nth-child(1) {
+      order: 1;
+    }
+
+    &__card:nth-child(2) {
+      order: 3;
+    }
+
+    &__card:nth-child(3) {
+      order: 2;
+    }
+
+    &__card:nth-child(4) {
+      order: 4;
+    }
+
+    &__card:nth-child(2n) {
+      flex-direction: column;
+    }
+
+    &__card-img {
+      margin-bottom: 10px;
+    }
+
+    &__card-description {
+      width: 100%;
+      height: auto;
+      min-height: 94px;
+      justify-content: start;
+      align-items: center;
+    }
+
+    &__card-title {
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    &__card-text {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 50px;
+    padding-bottom: 56px;
+
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__card:nth-child(1) {
+      order: 0;
+    }
+
+    &__card:nth-child(2) {
+      order: 0;
+    }
+
+    &__card:nth-child(3) {
+      order: 0;
+    }
+
+    &__card:nth-child(4) {
+      order: 0;
+    }
+
+    &__card-description {
+      min-height: auto;
+    }
+
+    &__card-img {
+      margin-bottom: 12px;
+    }
+
+    &__card-title {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    &__card-text {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      padding: 0;
+      max-width: 350px;
+    }
+
+  }
+
+  @media (max-width: 415px) {
+    padding-bottom: 36px;
+
+    &__card {
+      margin-bottom: 20px;
+    }
+
+    &__card-img {
+      margin-bottom: 15px;
+    }
+
+    &__card-title {
+      margin-bottom: 10px;
+    }
+
+    &__card-text {
+      line-height: 1.4;
+      max-width: 310px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+/*
+* SCSS
+* Name: _scene-contacts-first.scss
+* Path: src\components\modules\scene-contacts-first\styles\
+ */
+
+@use "sass:math";
+
+@mixin scene-contacts-first-block-size($ratio: 1) {
+  $width: 700px;
+  $height: 460px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+%scene-contacts-first {
+  background-image: url("../images/scene-contacts-first.svg");
+}
+
+.scene-contacts-first {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-contacts-first-block-size(1);
+
+  @media (max-width: 1100px) {
+    @include scene-contacts-first-block-size(0.75);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-contacts-first-block-size(0.83);
+  }
+
+  @media (max-width: 540px) {
+    @include scene-contacts-first-block-size(0.65);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-contacts-first-block-size(0.54);
+  }
+
+  @media (max-width: 320px) {
+    @include scene-contacts-first-block-size(0.43);
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__contacts-0 {
+    @extend %scene-contacts-first;
+    background-position: 0 100%;
+  }
+
+  &__contacts-1 {
+    @extend %scene-contacts-first;
+    background-position: 0 75%;
+  }
+
+  &__contacts-2 {
+    @extend %scene-contacts-first;
+    background-position: 0 50%;
+  }
+
+  &__contacts-3 {
+    @extend %scene-contacts-first;
+    background-position: 0 25%;
+  }
+
+  &__contacts-4 {
+    @extend %scene-contacts-first;
+    background-position: 0 0%;
+  }
+}

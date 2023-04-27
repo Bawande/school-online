@@ -1,0 +1,71 @@
+/*
+* SCSS
+* Name: _scene-offer.scss
+* Path: src\components\modules\scene-offer\
+ */
+@use "sass:math";
+
+
+@mixin scene-offer-block-size($ratio: 1) {
+  $width: 170px;
+  $height: 220px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-offer {
+
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-offer-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-offer-block-size(0.95);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-offer-block-size(1.2);
+  }
+
+  @media (max-width: 540px) {
+    @include scene-offer-block-size(0.8);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-offer-block-size(0.6);
+  }
+
+  @media (max-width: 320px) {
+    @include scene-offer-block-size(0.6);
+  }
+
+  &__item {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+
+  &__shadow {
+    background-image: url("../images/scene-offer-shadow.svg");
+  }
+
+  &__read-girl {
+    background-image: url("../images/scene-offer-read-girl.svg");
+  }
+
+  &__read-boy {
+    background-image: url("../images/scene-offer-read-boy.svg");
+  }
+}

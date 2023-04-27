@@ -1,0 +1,81 @@
+/*
+* SCSS
+* Name: _scene-for-whom.scss
+* Path: src\components\modules\scene-for-whom\styles\
+ */
+@use "sass:math";
+
+@mixin scene-for-whom-block-size($ratio: 1) {
+  $width: 90px;
+  $height: 90px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-for-whom {
+
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-for-whom-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-for-whom-block-size(0.9);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-for-whom-block-size(0.9);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-for-whom-block-size(0.97);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-for-whom-block-size(1);
+  }
+
+  @media (max-width: 320px) {
+    @include scene-for-whom-block-size(1);
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__experience {
+    background-image: url("../images/scene-for-whom-experience.svg");
+    background-position: 0 0;
+  }
+
+  &__traveler {
+    background-image: url("../images/scene-for-whom-traveler.svg");
+    background-position: 0 0;
+  }
+
+  &__abroad {
+    background-image: url("../images/scene-for-whom-abroad.svg");
+    background-position: 0 0;
+  }
+
+  &__sport {
+    background-image: url("../images/scene-for-whom-sport.svg");
+    background-position: 0 0;
+  }
+
+  &__family {
+    background-image: url("../images/scene-for-whom-family.svg");
+    background-position: 0 0;
+  }
+}

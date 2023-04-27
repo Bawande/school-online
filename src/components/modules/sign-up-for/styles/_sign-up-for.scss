@@ -1,0 +1,58 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+.sign-up-for {
+  max-width: 275px;
+  min-width: 260px;
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__social .text {
+    font-size: 17px;
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+
+  &__social-buttons {
+    font-size: 0;
+  }
+
+  &__social-buttons .btn-nav-social:nth-child(1) {
+    margin-right: 15px;
+  }
+
+  @media (max-width: 1000px) {
+    &__social .text {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__social .text {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {}
+
+  @media (max-width: 415px) {
+    &__social .text {
+      margin-right: 10px;
+    }
+
+    &__social-buttons .btn-nav-social:nth-child(1) {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    min-width: 230px;
+  }
+}

@@ -1,0 +1,28 @@
+%svg-sprite-form-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background: url("../images/form-icon.svg") no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%icon-form-name {
+  @extend %svg-sprite-form-icon;
+  background-position: 0 0;
+}
+
+%icon-form-phone {
+  @extend %svg-sprite-form-icon;
+  background-position: 0 50%;
+}
+
+%icon-form-class {
+  @extend %svg-sprite-form-icon;
+  background-position: 0 100%;
+}
+
+@import './form-base';
+@import './form-callback';
+@import './select';

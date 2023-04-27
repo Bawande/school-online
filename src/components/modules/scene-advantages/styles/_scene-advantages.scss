@@ -1,0 +1,142 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+
+@use "sass:math";
+
+@mixin scene-advantages-block-size($ratio: 1) {
+  $width: 213px;
+  $height: 213px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-advantages {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-advantages-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-advantages-block-size(0.9);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-advantages-block-size(0.9);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-advantages-block-size(0.7);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-advantages-block-size(0.75);
+  }
+
+  @media (max-width: 320px) {
+    @include scene-advantages-block-size(0.6);
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__background {
+    background-image: url("../images/advantages-background-all.svg");
+    background-position: 0 0;
+  }
+
+  // --- access ---
+  &__access-0 {
+    background-image: url("../images/scene-advantages-access.svg");
+    background-position: 0 100%;
+  }
+
+  &__access-1 {
+    background-image: url("../images/scene-advantages-access.svg");
+    background-position: 0 66.666%;
+  }
+
+  &__access-2 {
+    background-image: url("../images/scene-advantages-access.svg");
+    background-position: 0 33.333%;
+  }
+
+  &__access-3 {
+    background-image: url("../images/scene-advantages-access.svg");
+    background-position: 0 0;
+  }
+
+  // --- balance ---
+  &__balance-0 {
+    background-image: url("../images/scene-advantages-balance.svg");
+    background-position: 0 0;
+  }
+
+  // --- no-stress ---
+  &__no-stress-0 {
+    background-image: url("../images/scene-advantages-no-stress.svg");
+    background-position: 0 100%;
+  }
+
+  &__no-stress-1 {
+    background-image: url("../images/scene-advantages-no-stress.svg");
+    background-position: 0 50%;
+  }
+
+  &__no-stress-2 {
+    background-image: url("../images/scene-advantages-no-stress.svg");
+    background-position: 0 0%;
+  }
+
+  // --- professionals ---
+  &__professionals-0 {
+    background-image: url("../images/scene-advantages-professionals.svg");
+    background-position: 0 0;
+  }
+
+  // --- schedule ---
+  &__schedule-0 {
+    background-image: url("../images/scene-advantages-schedule.svg");
+    background-position: 0 100%;
+  }
+
+  &__schedule-1 {
+    background-image: url("../images/scene-advantages-schedule.svg");
+    background-position: 0 50%;
+  }
+
+  &__schedule-2 {
+    background-image: url("../images/scene-advantages-schedule.svg");
+    background-position: 0 0%;
+  }
+
+  // --- schedule ---
+  &__school-supplies-0 {
+    background-image: url("../images/scene-advantages-school-supplies.svg");
+    background-position: 0 100%;
+  }
+
+  &__school-supplies-1 {
+    background-image: url("../images/scene-advantages-school-supplies.svg");
+    background-position: 0 50%;
+  }
+
+  &__school-supplies-2 {
+    background-image: url("../images/scene-advantages-school-supplies.svg");
+    background-position: 0 0%;
+  }
+}

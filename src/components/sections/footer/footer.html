@@ -1,0 +1,42 @@
+<!--
+  * HTML
+  * Name: footer.html
+  * Path: src\components\sections\footer\
+-->
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__logo">
+      <img src="./images/img-footer-logo.svg" alt="логотип - школа будущего online">
+    </div>
+
+    <div class="footer__class-nav class-nav">
+      <!-- @@include('./parts/class-nav.html', {"parameters": {}}) -->
+      @@include('../../../components/modules/class-nav/class-nav.html', {"parameters": {}})
+
+    </div> <!-- / .footer__class-nav -->
+
+    <div class="footer__helpful-nav helpful-nav">
+
+      <div class="helpful-nav__documents hn-documents">
+        @@include('./parts/hn-documents.html', {"parameters": {}})
+      </div> <!-- / .helpful-nav__documents -->
+
+    </div> <!-- footer__helpful-nav -->
+
+    <div class="footer__feedback-nav feedback-nav">
+
+      <div class="feedback-nav__feedback fn-contacts">
+        @@include('./parts/fn-contacts.html', {"parameters": {}})
+      </div> <!-- / .feedback-nav__feedback -->
+
+      <div class="feedback-nav__social fn-social">
+        @@include('./parts/fn-social.html', {"parameters": {}})
+      </div> <!-- / .feedback-nav__social -->
+
+    </div> <!-- / .footer__feedback-nav -->
+
+    <div class="footer__output-nav output-nav">
+      @@include('./parts/output-nav.html', {"parameters": {}})
+    </div> <!-- / .footer__output-nav -->
+  </div>
+</footer>

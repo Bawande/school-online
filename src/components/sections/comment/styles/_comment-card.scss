@@ -1,0 +1,299 @@
+.comment-card {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 615px;
+  height: 270px;
+
+  padding: 38px 32px;
+
+  background-color: $theme-background;
+  border-radius: 15px;
+
+  box-shadow: 14px 22px 40px rgb(30 35 66 / 28%);
+
+  cursor: grab;
+
+  &::before {
+    position: absolute;
+    top: 30px;
+    left: 45px;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 100%;
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+
+    background-image: $theme-secondary-accent;
+    border-radius: 20px;
+
+    content: "";
+  }
+
+  &--vkontakte {
+    &::after {
+      background-image: $vkontacte-gradient;
+    }
+
+    &::before {
+      @extend %icon-social-vkontakte;
+    }
+  }
+
+  &--instagram {
+    &::after {
+      background-image: $instagram-gradient;
+    }
+
+    &::before {
+      @extend %icon-social-instagram;
+    }
+  }
+
+  &--facebook {
+    &::after {
+      background-image: $facebook-gradient;
+    }
+
+    &::before {
+      @extend %icon-social-facebook;
+    }
+  }
+
+  // .comment-card__person
+
+  &__person {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+    margin-top: 56px;
+    margin-right: 10px;
+
+    text-align: center;
+
+    // cursor: default;
+  }
+
+  // .comment-card__person-name
+
+  &__person-name {
+    width: 100%;
+    margin-bottom: 10px;
+
+    font-size: 2.6rem;
+    line-height: 1;
+    text-align: inherit;
+  }
+
+  // .comment-card__person-status
+
+  &__person-status {
+    width: 100%;
+    margin-bottom: 18px;
+
+    font-size: 1.8rem;
+  }
+
+  // .comment-card__person-url
+
+  &__person-url {
+    width: 100%;
+
+    color: #789cf1;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    &:visited {
+      color: #789cf1;
+    }
+  }
+
+  // .comment-card__comment
+
+  &__comment {
+    position: relative;
+    z-index: 20;
+
+    display: block;
+    max-width: 330px;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    // cursor: default;
+
+    &::after {
+
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: -1;
+
+      display: block;
+      width: 163px;
+      height: 148px;
+
+      background-image: url("../images/background-comment-card.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      opacity: 0.8;
+
+      content: "";
+    }
+  }
+
+  // @media (max-width: 500px)
+
+  @media (max-width: 500px) {
+
+    height: 210px;
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 7px 11px 20px rgb(30 35 66 / 28%);
+
+    &::before {
+      top: 20px;
+      left: 20px;
+
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      left: -3px;
+
+      border-radius: 13px;
+    }
+
+    &__comment {
+      max-width: 256px;
+
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    &__person {
+      max-width: 130px;
+      margin-top: 50px;
+
+      text-align: start;
+    }
+
+    &__person-name {
+      font-size: 1.8rem;
+    }
+
+    &__person-status {
+      margin-bottom: 10px;
+    }
+
+    &__person-status,
+    &__person-url {
+      font-size: 1.2rem;
+    }
+  }
+
+  // @media (max-width: 415px)
+
+  @media (max-width: 415px) {
+    max-width: 360px;
+    height: 160px;
+    padding: 15px;
+
+    &__person {
+      max-width: 110px;
+      margin-top: 35px;
+
+      line-height: 1.1;
+    }
+
+    &__person-name {
+      margin-bottom: 6px;
+
+      font-size: 16px;
+    }
+
+    &__person-status {
+      margin-bottom: 6px;
+    }
+
+    &__person-status,
+    &__person-url {
+      font-size: 10px;
+    }
+
+    &__comment {
+      max-width: 210px;
+
+      font-size: 11px;
+      line-height: 1.3;
+    }
+  }
+
+  // @media (max-width: 360px)
+
+  @media (max-width: 360px) {
+    display: block;
+    max-width: 280px;
+    height: 280px;
+    padding: 20px;
+
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__person {
+      max-width: 100%;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-left: 45px;
+    }
+
+    &__person-name {
+      margin-bottom: 4px;
+
+      font-size: 20px;
+    }
+
+    &__person-status {
+      margin-bottom: 4px;
+    }
+
+    &__person-status,
+    &__person-url {
+      font-size: 14px;
+    }
+
+    &__comment {
+      max-width: 100%;
+
+      font-size: 12px;
+    }
+  }
+}

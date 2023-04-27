@@ -1,0 +1,93 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+
+@use "sass:math";
+
+@mixin scene-loved-for-block-size($ratio: 1) {
+  $width: 630px;
+  $height: 440px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+%scene-loved-for {
+  background-image: url("../images/scene-loved-for.svg");
+}
+
+#id-loved-for-wrap {
+  display: inline-block;
+}
+
+.scene-loved-for {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  @include scene-loved-for-block-size(1);
+
+  @media (max-width: 1024px) {
+    @include scene-loved-for-block-size(0.8);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-loved-for-block-size(0.54);
+  }
+
+  @media (max-width: 640px) {
+    @include scene-loved-for-block-size(0.7);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-loved-for-block-size(0.63);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-loved-for-block-size(0.58);
+  }
+
+  @media (max-width: 320px) {
+    @include scene-loved-for-block-size(0.47);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__front-stars {
+    @extend %scene-loved-for;
+    background-position: 0 100%;
+  }
+
+  &__tablet {
+    @extend %scene-loved-for;
+    background-position: 0 66.666%;
+  }
+
+  &__calc-nb {
+    @extend %scene-loved-for;
+    background-position: 0 33.333%;
+  }
+
+  &__little-things {
+    @extend %scene-loved-for;
+    background-position: 0 0%;
+  }
+}

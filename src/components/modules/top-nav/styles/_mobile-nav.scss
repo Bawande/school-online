@@ -1,0 +1,130 @@
+.mobile-nav {
+
+  position: fixed;
+  top: 0;
+  z-index: 30;
+
+  overflow: hidden;
+  // overflow-y: auto;
+
+  width: 100vw;
+  height: auto;
+  max-height: 100vh;
+
+  background-color: $theme-surface;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 124px 20px 52px;
+
+  text-align: center;
+
+  box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+  border-radius: 0px 0px 15px 15px;
+
+  & a.btn-nav-header-top-menu {
+    display: block;
+    padding: 8px 0;
+  }
+
+  &__container {
+    // overflow-y: hidden;
+    height: 100%;
+    max-height: calc(100vh - 144px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  &__list {
+    max-width: 220px;
+    margin-bottom: 24px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  &__cabinet {
+    margin-bottom: 24px;
+  }
+
+  &__class-nav {
+    margin-bottom: 24px;
+
+    & .title {
+      width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+    }
+
+    & .title__h4 {
+      margin-bottom: 24px;
+    }
+
+    & .class-nav__class-item {
+      text-align: center;
+    }
+  }
+
+  &__phone {
+    font-size: 20px;
+  }
+
+  @media (max-width: 415px) {
+    padding: 114px 20px 62px;
+  }
+
+}
+
+.mobile-nav {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &[aria-hidden="false"] {
+    animation: open-menu 0.5s ease;
+  }
+
+  &[aria-hidden="true"] {
+    animation: close-menu 0.5s ease;
+  }
+
+  @media (min-width: 640px) {
+    &.active {
+
+      display: none;
+    }
+  }
+}
+
+@keyframes open-menu {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes close-menu {
+  from {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%) translateX(-50%);
+    opacity: 0;
+  }
+}

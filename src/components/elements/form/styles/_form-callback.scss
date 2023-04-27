@@ -1,0 +1,133 @@
+.form-callback {
+  @extend %form-default;
+
+  &__fields {}
+
+  &__legend {}
+
+  &__field,
+  &__input {
+    border-radius: 32px;
+    transition: border-color 0.2s ease;
+  }
+
+  &__field {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  &__field::before {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+
+    display: block;
+    width: 56px;
+
+    background-color: $theme-grey-5;
+
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+
+    content: "";
+  }
+
+  &__input {
+    padding: 20px 8px 20px 64px;
+
+    font-size: 1.3rem;
+    font-family: Gotham, Arial, Helvetica, sans-serif;
+    line-height: 1.1;
+    text-decoration: none;
+
+    border: 1px solid $theme-grey-10;
+  }
+
+  &__input.focus-visible {
+    outline: solid 3px Lightsalmon !important;
+  }
+
+  &__ico {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+
+    opacity: 0.8;
+
+    &--class {
+      @extend %icon-form-class;
+    }
+
+    &--phone {
+      @extend %icon-form-phone;
+    }
+
+    &--name {
+      @extend %icon-form-name;
+    }
+  }
+
+  &__field.error {
+    &::before {
+      background-color: $theme-error-surface;
+    }
+
+  }
+
+  &__field.error &__input {
+
+    color: $theme-error;
+
+    border-color: $theme-error;
+  }
+
+  // &__input:focus {
+  //   border-color: $theme-focus;
+  // }
+
+  @media (hover: hover) and (pointer: fine),
+  screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    &__input:hover {
+      border-color: $theme-grey-20;
+    }
+
+    &__input:hover+&__ico {
+      opacity: 0.95;
+    }
+  }
+
+
+  // @media (max-width: 320px)
+
+  @media (max-width: 320px) {
+    &__field::before {
+      width: 42px;
+    }
+
+    &__input {
+      padding: 12px 8px 12px 54px;
+    }
+
+    &__ico {
+      width: 20px;
+      height: 20px;
+
+      left: 15px;
+    }
+  }
+}

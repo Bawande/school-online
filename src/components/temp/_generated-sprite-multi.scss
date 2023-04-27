@@ -1,0 +1,11 @@
+%svg-common {
+    background: url("../images/sprite-multi.svg") no-repeat;
+}
+
+%icon-multi-test_copy_2 {
+    @extend %svg-common;
+    background-position: 0 0;
+    width: 24px;
+    height: 24px;
+}
+

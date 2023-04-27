@@ -1,0 +1,116 @@
+/*
+* SCSS
+* Name:
+* Path:
+ */
+@use "sass:math";
+
+@mixin scene-how-works-block-size($ratio: 1) {
+  $width: 280px;
+  $height: 240px;
+  width: math.round($width * $ratio);
+  height: math.round($height * $ratio);
+}
+
+.scene-how-works-wrap {
+  display: inline-block;
+}
+
+.scene-how-works {
+  position: relative;
+
+  display: inline-block;
+
+  overflow: hidden;
+
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
+
+  @include scene-how-works-block-size(1);
+
+  @media (max-width: 1000px) {
+    @include scene-how-works-block-size(0.8);
+  }
+
+  @media (max-width: 768px) {
+    @include scene-how-works-block-size(0.7);
+  }
+
+  @media (max-width: 480px) {
+    @include scene-how-works-block-size(0.7);
+  }
+
+  @media (max-width: 415px) {
+    @include scene-how-works-block-size(0.7);
+  }
+
+  @media (max-width: 320px) {
+    @include scene-how-works-block-size(0.7);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // --- materials ---
+  &__additional-materials-0 {
+    background-image: url("../images/scene-how-works-additional-materials.svg");
+    background-position: 0 100%;
+  }
+
+  &__additional-materials-1 {
+    background-image: url("../images/scene-how-works-additional-materials.svg");
+    background-position: 0 0;
+  }
+
+  // --- homework ---
+  &__homework-0 {
+    background-image: url("../images/scene-how-works-homework.svg");
+    background-position: 0 100%;
+  }
+
+  &__homework-1 {
+    background-image: url("../images/scene-how-works-homework.svg");
+    background-position: 0 50%;
+  }
+
+  &__homework-2 {
+    background-image: url("../images/scene-how-works-homework.svg");
+    background-position: 0 0;
+  }
+
+  // // --- live-lessons ---
+  &__live-lessons-0 {
+    background-image: url("../images/scene-how-works-live-lessons.svg");
+    background-position: 0 100%;
+  }
+
+  &__live-lessons-1 {
+    background-image: url("../images/scene-how-works-live-lessons.svg");
+    background-position: 0 0;
+  }
+
+  // --- evaluation ---
+  &__verification-evaluation-0 {
+    background-image: url("../images/scene-how-works-verification-evaluation.svg");
+    background-position: 0 100%;
+  }
+
+  &__verification-evaluation-1 {
+    background-image: url("../images/scene-how-works-verification-evaluation.svg");
+    background-position: 0 0;
+  }
+}
